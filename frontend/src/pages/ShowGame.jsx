@@ -14,12 +14,12 @@ const ShowGame = () => {
         axios
             .get(`http://localhost:9999/games/${id}`)
             .then((res) => {
-                setGames(res.data);
                 setLoading(false);
+                setGames(res.data);
             })
             .catch((err) => {
-                console.log(err);
                 setLoading(false);
+                console.log(err);
             });
     }, [id]);
 
